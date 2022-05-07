@@ -1,0 +1,52 @@
+﻿@* View containing a basic info table for all currently available books along with details button *@
+
+@model IEnumerable<DamianMuchaDom2.Models.Book>
+
+
+@{
+    ViewData["Title"] = "Books";
+}
+
+<h1>Available books</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Number
+            </th>
+            <th class="text-center">
+                Title
+            </th>
+            <th class="text-center">
+                Price (zł)
+            </th>
+            <th class="text-center">
+                Cover image
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td class="text-center">
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td class="text-center">
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td class="text-center">
+                    <img class="rounded" src="~/images/@item.Image" style="width:10rem" />
+                </td>
+                <td>
+                    @Html.ActionLink("Details", "BookDetails", new { id = item.Id })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

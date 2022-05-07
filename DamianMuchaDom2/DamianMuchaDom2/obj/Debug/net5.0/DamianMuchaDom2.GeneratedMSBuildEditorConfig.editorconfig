@@ -1,0 +1,10 @@
+is_global = true
+build_property.TargetFramework = net5.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.PublishSingleFile = 
+build_property.IncludeAllContentForSelfExtract = 
+build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
+build_property.RootNamespace = DamianMuchaDom2
+build_property.ProjectDir = E:\PWR\6semestr\kredek\damian_mucha_cpc2022-1\damian_mucha_lab2\praca_domowa\DamianMuchaDom2\DamianMuchaDom2\

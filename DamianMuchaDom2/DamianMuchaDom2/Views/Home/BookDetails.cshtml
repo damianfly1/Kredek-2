@@ -1,0 +1,30 @@
+﻿@* View that displays detailed information about a book *@
+
+@model DamianMuchaDom2.Models.Book
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1>Book details</h1>
+            <img class="rounded" src="~/images/@Model.Image" style="width:20rem" />
+        </div>
+        <div class="col">
+            <h3>@Model.Title</h3>
+            <h5>Author:</h5>
+            <p>@Model.Author</p>
+            <h5>Plot description:</h5>
+            <p>@Model.Description</p>
+            <h5>Genre: </h5>
+            <p>@Model.Genre</p>
+            <h5 class="my-2">Price: @Model.Price zł</h5>
+            <input type="button" class="btn btn-primary" value="Order!" onclick="location.href='@Url.Action("CreateOrder", "Home", new {id = Model.Id})'" />
+            <hr />
+            <a asp-action="AllBooks">Go back</a>
+        </div>
+    </div>
+    
+</div>
